@@ -1,0 +1,2457 @@
+UCTAG. MANTER HOSPEDAGEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, excluir e consultar hospedagens, contemplando os seguintes atributos:
+* Código da hospedagem
+* Localidade (casa de oração) de referencia
+* Tipo [Igreja / Hospedagem /  Residência]
+* Modalidade [Hospedagem Oficial / Hospedagem Não Oficial]
+* Código pessoa responsável
+* Capacidade (quantidade de leitos)
+* Ocupação (valor preenchido conforme o calculo de ocupação, vide requisito RFN005)
+* Data de inclusão
+* Status [Inativo / Ativo] 
+* Endereço
+* Numero
+* Complemento 
+* Cidade
+* Estado 
+* Região
+* País
+* Código postal
+DELTAG2
+UCTAG. MANTER PESSOA FÍSICA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar pessoa física, contemplando os seguintes atributos:
+* Código
+* Nome
+* Endereço
+* Numero
+* Complemento 
+* Cidade
+* Estado 
+* Região
+* País
+* Codigo postal
+* Email
+* Localidade (casa de oração) comum
+* Foto
+* Cartão de identificação
+* Status Cartão [Pendente de Emissão / Bloqueado / Ativo / Suspenso / Cancelado]
+Telefones
+* Tipo de telefone [Residencial / Celular / Trabalho / Contato / Outros]
+* Descrição de Outros
+* Número do Telefone
+DELTAG2
+UCTAG. MANTER PARTICIPANTE DE REUNIÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, excluir e consultar participante de reunião, contemplando os seguintes atributos:
+* Código do irmão participante 
+* Código do evento
+* Código do local de hospedagem  
+* Leito 
+* Status [Reserva1 / Reserva2 / Livre / Ocupado]
+* Local de chegada 
+* Entrada (data-hora)
+* Saída (data-hora)
+* Meio de transporte para retorno [Rodoviário / Aéreo / Veículo Próprio]
+* Previsão de retorno (data-hora)
+* Terminal
+DELTAG2
+UCTAG. GERAR MAPA DE HOSPEDAGEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para exibir o mapa da hospedagem, contemplando os seguintes atributos:
+Filtros
+* Código do evento
+* Código da hospedagem 
+Resultado
+* Código da hospedagem
+* Endereço da hospedagem
+* Tipo da hospedagem 
+* Capacidade
+Disponibilidade  dos Leitos
+* Leito
+* Status
+* Ocupante do leito (Nome do irmão)
+* Código do evento (evento da qual o irmão fará parte)
+* Data de entrada
+* Data de saída
+DELTAG2
+UCTAG. SOLICITAR SUPORTE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para solicitação de suporte, contemplando os seguintes atributos:
+* Código do evento
+* Código do solicitante
+* Recurso desejado
+* Justificativa
+DELTAG2
+UCTAG. MANTER HOSPEDAGEM - DETALHE LEITO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, excluir e consultar leitos disponíveis de hospedagem, contemplando os seguintes atributos:
+* Hospedagem vinculada (código da hospedagem)
+* Leito
+* Status [Reserva1 / Reserva2 / Livre / Ocupado / Inativo]
+* Ocupante (Nome do irmão que estará hopedado)
+* Evento (Evento que o ocupante participará)
+DELTAG2
+UCTAG. MANTER LOCAL DE CHEGADA 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar local de chegada, contemplando os seguintes atributos:
+* Local de chegada
+* Ponto de referência
+* Endereço
+* Numero
+* Complemento 
+* Cidade
+* Estado 
+* Região
+* País
+* Codigo postal
+DELTAG2
+UCTAG. GERAR RELATÓRIO ESTATÍSTICO QUANTIDADE DE CHEGADAS HOSPEDAGEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve gerar um relatório para exibir a estatística sobre quantidade de chegadas na hospedagem, contemplando os seguintes atributos:
+Filtros
+* Código do evento
+* Código da hospedagem
+* Data
+Resultado
+* Data
+* Horário
+* Hospedagem
+*  Irmãos (retornará uma relação dos irmãos que chegarão no momento selecionado nos filtros acima)
+* Quantidade total 
+DELTAG2
+UCTAG. GERAR RELATÓRIO ESTATÍSTICO QUANTIDADE DE CHEGADAS POR LOCAL	UCTAG.	Requirement
+DELTAG1
+O sistema deve gerar um relatório para exibir a estatística sobre quantidade de chegadas, contemplando os seguintes atributos:
+Filtros
+* Código do evento
+* Local de chegada
+* Data
+Resultado
+* Data
+* Local de chegada
+* Quantidade de irmãos
+DELTAG2
+UCTAG. MANTER LOCAL DE EMBARQUE 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar locais de embarque, contemplando os seguintes atributos:
+* Local de embarque
+* Ponto de referência
+* Endereço
+* Numero
+* Complemento 
+* Cidade
+* Estado 
+* Região
+* País
+* Codigo postal
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE PREVISÃO DE RETORNO POR MODALIDADE 	UCTAG.	Requirement
+DELTAG1
+O sistema deve gerar um relatório de previsão de retorno por modalidade e destino, contemplando os seguintes atributos:
+Filtros
+* Código do evento
+* Local de embarque
+* Data
+Resultado
+* Data prevista
+* Horário
+* Local de embarque
+* Nome do Irmão
+* Ministério
+* Localidade
+* Modalidade de transporte
+DELTAG2
+UCTAG. GERAR RELATÓRIO ESTATÍSTICO POR MODALIDADE 	UCTAG.	Requirement
+DELTAG1
+O sistema deve gerar um relatório estatístico por modalidade e destino, contemplando os seguintes atributos:
+Filtros
+* Código do evento
+* Local de embarque
+* Modalidade do Transporte
+* Data
+Resultado
+* Data prevista
+* Local de embarque
+* Modalidade de transporte
+* Irmãos (relação dos irmãos)
+* Quantidade total de irmãos
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE COLABORADORES POR ÁREA 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de colaboradores por sub-área, contemplando os seguintes atributos: 
+Filtros
+* Localidade (casa de oração)
+* Regional
+* Subregional
+* Administração
+* Sub-área
+* Status Colaborador [Sugerido / Confirmado / Não Aprovado]
+Resultado
+* Código Colaborador
+* Nome 
+* Status 
+* Cargo / Função 
+* Data de Apresentação
+* Localidade (casa de oração) Comum 
+* Sub-área
+DELTAG2
+UCTAG. MANTER CALENDÁRIO DE CONFIRMAÇÕES	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar o calendário de datas para retorno de confirmação dos convocados, contemplando os seguintes atributos:
+* Evento
+* Localidade (casa de oração) ou Administração
+* Data de retorno
+DELTAG2
+UCTAG. MANTER SUB-ÁREA DE AJUDA 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para manter sub-área de ajuda, contemplando os seguintes atributos:
+* Nome da área abreviado (exemplo: COZINHA, PORTARIA)
+* Descrição
+DELTAG2
+UCTAG. PESQUISAR PESSOA FÍSICA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para pesquisa de pessoa física, contemplando os seguintes atributos:
+Filtros
+* Código 
+* Nome
+* RG
+* CPF
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade (casa de oração) comum ou relacionada
+* Cartão de Identificação CCB
+* Departamento
+* Cargo / Ministério / Função
+Filtros Específico de Colaborador
+* Status [Sugerido / Confirmado / Não Aprovado]
+* Sub-área
+Resultado
+* Código
+* Nome 
+* Cargo / Função / Ministério
+* Localidade (casa de oração) comum
+* Link para [Mais detalhes...]
+DELTAG2
+UCTAG. MANTER CARTÃO DE IDENTIFICAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para manter cartão de identificação dos colaboradores, contemplando os seguintes atributos:
+Comandos
+* Emitir
+* Ativar
+* Suspender
+* Cancelar
+Dados Gerais
+* Código do irmão
+* Cartão de Identificação
+* Status Cartão [Pendente de Emissão / Bloqueado / Ativo / Suspenso / Cancelado]
+* Situação [Pendente de Envio / Enviado / Devolvido / Entregue / Em mãos]
+* Foto
+* Data de emissão
+* Data de ativação
+* Data de suspensão
+* Data de cancelamento
+* Data de vencimento
+DELTAG2
+UCTAG. GERAR ETIQUETA / CARTA DE CONVOCAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar  uma interface para gerar etiqueta / carta de convocação, contemplando os seguintes atributos:
+Filtros
+* Evento
+* Localidade (casa de oração) Origem
+* Regional Destino
+* Sub-regional Destino
+* Administração Destino
+* Setor Destino
+* Localidade (casa de oração) Destino
+* Sub-área
+* Ministerio / Cargo / Função
+* Destinatário 
+* País
+* Região
+* Estado
+* Cidade
+* Emissão de: (preenchimento obrigatório)
+o Etiqueta para ministério (nominal)
+o Etiqueta para localidade 
+o Carta de convocação
+o Comunicado (para que serveria este comunicado?)
+Resultado
+Remetente:
+* Localidade Origem
+Destinatário:
+* Localidade destino (casa de oração)
+* Pais
+* Estado
+* Cidade
+* Endereço
+* Código postal
+*  Destinatário 
+* Cargo / Função / Ministério
+Corpo da carta de convocação
+* Evento
+* Data do evento
+* Localidade do evento
+* Mensagem (texto da carta convite).
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE LOCALIDADE PENDENTE	UCTAG.	Requirement
+DELTAG1
+O sistema deve gerar um relatório de localidade pendente de aprovação de colaborador por parte do ministério, contemplando os seguintes atributos:
+Filtros
+* Evento
+* Sub-área
+* Regional
+* Subregional 
+* Administração
+Resultado
+* Localidade
+* Estado
+* Cidade
+DELTAG2
+UCTAG. EMITIR CARTÃO DE ACESSO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para emissão dos cartões de acesso, contemplando os seguintes atributos:
+Filtros
+* RGE
+* Status Cartão [Pendente de Emissão / Bloqueado / Ativo / Suspenso / Cancelado]
+* Regional
+* Sub-regional
+* Administração
+* Localidade (casa de oração)
+* Irmão
+* Período de Validade
+Resultado
+* Flag (indicador, check) para indicar se o cartão será emitido ou não
+Cabeçalho
+* Nome da Congregação Cristã formatado conforme país
+* Administração
+* Local RGE
+* Campo Texto Padrão: 'Cartão de Ingresso'
+* Campo Texto Padrão: 'Este cartão de ingresso deve ser apresentado na entrada'
+* Período de validade
+Dados Irmão
+* Nome do irmão
+* Localidade
+* RGA (Regional Administrativa a qual pertence) (É RGA ou é administração? RGA não é a reunião?)
+* Número do Cadastro do Irmão
+* Número do Cartão
+* Cargo / Ministério / Função
+* Localidade (casa de oração)
+* Endereço da localidade
+* CEP
+* Bairro
+* Cidade
+* Estado
+Dados Específicos de Colaborador
+* Sub-Área
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE FREQUÊNCIA DIÁRIO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de freqüência de colaboradores diários, contemplando os seguintes atributos:
+Filtro
+* Evento
+* Colaborador
+* Sub-área
+* Período
+Resultado
+* Nome do colaborador
+* Função
+* Sub-área
+* Localidade (casa de oração)
+* Datas de comparecimento
+* Total de colaboradores
+Comparativo com o ano anterior 
+* Datas de comparecimento
+* Total de colaboradores
+DELTAG2
+UCTAG. CONSULTAR CALENDÁRIO DE EVENTO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface de consulta de eventos no formato calendário, contemplando os seguintes atributos:
+Filtros
+* Tipo de evento
+Período:
+* Dia
+* Semana
+* Mês
+* Ano
+Esfera Administrativa:
+* Regional
+* Subregional
+* Administração
+* Localidade
+Resultado
+* (todos os dados de evento)
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE NÃO COMPARECIMENTO DE COLABORADOR 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de não comparecimento de colaboradores na RGE, contemplando os seguintes atributos:
+Filtro
+* Evento
+* Colaborador
+* Sub-área
+* Período
+Resultado
+* Nome do Colaborador
+* Função
+* Sub-área
+* Localidade
+* Data do último comparecimento
+DELTAG2
+UCTAG. MANTER TIPO DE EVENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir tipos de evento, contemplando os seguintes atributos:
+* Código do tipo de evento
+* Descrição do tipo de evento (ex. Reunião de Mocidade, Reunião Ministerial, RGE, RGA, etc.)
+* Responsável
+o Cargo / Ministério / Função do responsável
+o Se for Outros, a descrição (professor, palestrante)
+DELTAG2
+UCTAG. MANTER EVENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir eventos, contemplando os seguintes atributos:
+* Descrição
+* Tipo de evento 
+* Responsável (pode ser sobreposto com o que foi cadastrado no tipo de evento)
+o Cargo / Ministério / Função do responsável
+o Se for Outros, a descrição (professor, palestrante)
+* Local do evento
+o Localidade
+o Outro endereço que não localidade da Congregação Cristã
+Esfera Administrativa (permite selecionar vários)
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+Ocorrências
+* Frequencia [Semanal / Quinzenal / Mensal / Trimestral / Semestral / Anual]
+* Dia da semana (ex. segunda, terça, sábado)
+* Ocorrencia no mês (ex.: 1º, 2º, último, todos)
+* Mês (ex. janeiro, fevereiro)
+* Horário de início
+* Horário de fim
+* Duração
+Participantes
+* Convocados [nomes individuais / grupos (anciães, cooperadores, administradores, assessores, etc.)]
+* Observações
+DELTAG2
+UCTAG. PESQUISAR EVENTO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para pesquisar evento, contemplando os seguintes atributos:
+Filtros
+* Tipo de evento 
+* Freqüência [Anual/Trimestral/Mensal] 
+* Período
+* Regional
+* Subregional
+* Administração
+* Localidade
+* Servo que atenderá 
+Resultado
+* Tipo de evento 
+* Freqüência [Anual/Trimestral/Mensal] 
+* Período
+* Regional
+* Subregional
+* Administração
+* Localidade
+* Servo que atenderá
+DELTAG2
+UCTAG. GERAR LISTA DE BATISMOS E DIVERSOS 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar listas de batismo e diversos, contemplando os seguintes atributos:
+Dados de Entrada
+* Período
+* Regional
+* Subregional
+* Administração
+* Data de confecção
+Dados de Batismo
+* Incluir(sim/não) - Checkbox
+Dados de Ensaio Regional
+* Incluir(sim/não) - Checkbox
+Dados de Reunião da Mocidade
+* Incluir(sim/não) - Checkbox
+Dados de Reunião Ministerial
+* Incluir(sim/não) - Checkbox
+Dados de Suspensão de Culto
+* Incluir(sim/não) - Checkbox
+* Texto livre
+Dados de Abertura de Casa de Oração
+* Incluir(sim/não) - Checkbox
+* Texto livre 
+Dados de Reabertura de Casa de Oração 
+* Incluir(sim/não) - Checkbox
+* Texto livre 
+Dados de Fechamento de Casa de Oração
+* Incluir(sim/não) - Checkbox
+* Texto livre
+Dados de RGE e RGA
+* Incluir(sim/não) - Checkbox
+* Texto livre
+Dados Diversos
+* Incluir(sim/não) - Checkbox
+* Texto livre
+Dados de Coletas
+* Incluir(sim/não) - Checkbox
+* Texto livre
+Resultado - Relatório
+Dados de Batismo (esta seção será exibida se o checkbox de Incluir Batismo estiver = ‘sim’)
+* Data
+* Dia da semana abreviado
+* Horário
+* Localidade
+* Irmão ancião que atenderá o batismo
+Dados de Ensaio Regional (esta seção será exibida se o checkbox de Incluir Ensaio Regional estiver = ‘sim’)
+* Data
+* Horário
+* Localidade
+Dados de Reunião da Mocidade (esta seção será exibida se o checkbox de Incluir Reunião da Mocidade estiver = ‘sim’)
+* Data
+* Horário
+* Localidade 
+Dados de Reunião Ministerial (esta seção será exibida se o checkbox de Incluir Reunião Ministerial estiver = ‘sim’)
+* Data
+Dados de Suspensão de Culto (esta seção será exibida se o checkbox de Incluir Suspensão de Culto estiver = ‘sim’)
+* Texto livre
+Dados de Abertura de Casa de Oração (esta seção será exibida se o checkbox de Incluir Abertura de Casa de Oração estiver = ‘sim’)
+* Texto livre 
+Dados de Reabertura de Casa de Oração  (esta seção será exibida se o checkbox de Incluir Reabertura de Casa de Oração estiver = ‘sim’)
+* Texto livre 
+Dados de Fechamento de Casa de Oração (esta seção será exibida se o checkbox de Incluir Fechamento de Casa de Oração estiver = ‘sim’)
+* Texto livre
+Dados de RGE e RGA (esta seção será exibida se o checkbox de Incluir RGE e RGA estiver = ‘sim’)
+* Texto livre
+Dados Diversos (esta seção será exibida se o checkbox de Incluir Diversos estiver = ‘sim’)
+* Texto livre
+Dados de Coletas (esta seção será exibida se o checkbox de Incluir Coletas estiver = ‘sim’)
+Texto livre
+DELTAG2
+UCTAG. MANTER DOCUMENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir documentos, contemplando os seguintes atributos:
+* Origem [Físico / Digital]
+* Grupo
+Identificação do documento
+* Titulo
+* Subtítulo
+* Complemento
+* Nome do Documento
+* Departamento
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+* Origem do documento (Somente para os documentos para Acervo)
+o Nome da Pessoa
+o Data
+* Responsável pela informação (Caso Aplicável)
+* Data do Documento
+* Palavras Chave (texto livre para referencia e pesquisas)
+* Situação do Documento [Publico / Confidencial]
+* Formatos disponíveis [Físico / Digital / Ambos]
+* Localização pelo sistema
+o Pasta/Servidor
+o Sala e Numero do Arquivo Físico
+o Posição da Pasta Física
+o Agrupamento [Pasta / Livro ou Encadernado)
+o Localização digital (link)
+* Período de arquivamento do documento físico conforme o tipo e questão legal para retenção
+* Modalidade dos arquivos [Ativo (Arquivo Corrente) e Inativo (Arquivo Morto)
+* Status do Documento [No arquivo/ Retirado cópia do documento / Original retirado do arquivo]
+* Grupos de acesso (perfis autorizados a verem o documento)
+DELTAG2
+UCTAG. MOVIMENTAR DOCUMENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para controlar a movimentação de documentos, contemplando os seguintes atributos:
+* Numero da autorização (Incremental)
+* Data da solicitação
+* Nome do solicitante
+* Dados do portador
+o Departamento
+o Localidade
+o Telefone
+o Cargo ou Ministério
+* Tipo de Documento / Assunto
+* Código de identificação do(s) documento(s)
+* Data de retirada
+* Data de devolução
+* Período de uso
+* Nome do autorizador
+* Nome do liberador
+* Observação (Campo Texto)
+* Status [No arquivo / Retirado cópia do documento / Original retirado do arquivo]
+DELTAG2
+UCTAG. MANTER SOLICITAÇÃO DE VIAGEM 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, excluir e consultar solicitação de viagem, contemplando os seguintes atributos:
+Informações do usuário/Viagem
+* Evento (acrescentado)
+* Nome
+* Localidade
+* Descrição da viagem
+* Período da viagem
+* Data da partida
+* Data de retorno
+* Envelope de viagem [valor em dinheiro]
+Transporte
+* Tipo de transporte
+* Companhia
+* Código do transporte [número do vôo/ numero do ônibus]
+* Ticket [passagem]
+* Local de origem
+* Horário de partida
+* Local de chegada ao destino
+* Horário de chegada ao destino
+* Observações
+Hospedagem
+* Hospedagem [hotel, Pousada, etc.]
+* Endereço
+* Data de entrada
+* Horário de entrada
+* Data de saída
+* Horário de saída
+* Reserva [voucher de hotel, etc.]
+* Observações
+DELTAG2
+UCTAG. MANTER CHECKLIST EVENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, excluir e consultar checklist de evento, contemplando os seguintes atributos:
+* Evento
+* Área
+* Item
+* Antecedência da verificação [60 dias / 30 dias / 10 dias / 5 dias]
+* Providências
+DELTAG2
+UCTAG. MANTER CASA DE ORAÇÃO - DETALHE ORQUESTRA 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar informações de orquestra de uma determinada casa de oração, contemplando os seguintes atributos:
+Dados Gerais
+* Localidade (casa de oração)
+* Data de atualização
+* Número de músicos
+* Quantidade de instrumentos
+Dados Músico
+* Músico (pessoa física)
+* Tipo de instrumento
+Comentários
+* Data do comentário
+* Comentário
+Necessidades
+* Tipo de instrumento
+* Quantidade
+* Situação [Aberta / Cancelada / Atendida]
+DELTAG2
+UCTAG. CONSULTAR NECESSIDADE DE INSTRUMENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar necessidades em aberto de instrumentos, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Localidade (casa de oração)
+* Tipo de instrumento
+Resultado
+* Administração
+* Localidade (casa de oração)
+* Tipo de instrumento
+* Quantidade
+DELTAG2
+UCTAG. MANTER FORNECEDOR	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar fornecedor, contemplando os seguintes atributos:
+* Código do fornecedor
+* Nome do fornecedor
+* Tipo pessoa [Física / Jurídica] 
+* Esfera Administrativa [Regional / Sub-regional / Administração / Setor / Localidade] (não irá referenciar qual é a regional, ou sub-regional, ou administração, ou setor, ou localidade, que o fornecedor atenderá?)
+* Localidade (casa de oração)
+* Classificação (qual seria o valor deste campo?)(?)
+* Status [Qualificado / Não Qualificado / Ativo / Inativo]
+* Data de início de vigência
+* Data de término de vigência
+Dados Cadastrais
+* Razão Social
+* CNPJ
+* Inscrição estadual
+* Nome Fantasia
+* Endereço
+* Contato
+* Email
+* Telefone
+* Homepage
+* Data de cadastro 
+* Data de exclusão 
+* Segmento / Ramo
+* Comentário
+* Proposta de fornecimento
+Dados Bancários
+* Número Banco
+* Número Agencia
+* Digito agencia
+* Número conta corrente
+* Dígito conta corrente
+DELTAG2
+UCTAG. GERAR CONVITE FORNECEDOR PARA COTAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar convite aos fornecedores para emitirem cotação, contemplando os seguintes atributos:
+Dados de Entrada
+Dados Gerais
+* Data do convite
+* Data limite de retorno das cotações
+Necessidades
+* Necessidade
+* Produto
+* Quantidade necessária
+* Quantidade a ser atendida
+Fornecedores
+* Fornecedor
+* E-mail
+* Nome do Contato
+Produtos
+* Produto
+* Quantidade
+Saída (e-mail)
+* Data do convite
+* Fornecedor
+* Contato (Nome do contato)
+* Produto
+* Quantidade
+* Data limite de retorno das cotações
+* Texto da Mensagem
+DELTAG2
+UCTAG. REGISTRAR COTAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para registrar cotações, contemplando os seguintes atributos:
+* Numero da cotação
+* Fornecedor
+* Prazo de entrega
+* Total da cotação
+* Status [Recebida / Aprovada / Não Aprovada]
+Itens da cotação:
+* Código do produto
+* Descrição do produto
+* Unidade
+* Quantidade
+* Preço Unitário
+* Imposto
+* Preço total
+DELTAG2
+UCTAG. GERAR MAPA DE COTAÇÃO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar mapa de cotação, contemplando os seguintes atributos:
+Filtro
+* Fornecedor
+* Produto
+* Período
+Resultado 
+* Código do fornecedor
+* Código do produto
+* Descrição do produto
+* Quantidade
+* Preço Unitário
+* Imposto
+* Preço total
+DELTAG2
+UCTAG. MANTER PEDIDO DE COMPRA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para manutenção de pedidos de compra, contemplando os seguintes atributos:
+* Número do pedido
+* Data de emissão
+* Distribuidora de origem de compra
+* Fornecedor
+Itens do pedido
+* Código do produto
+* Descrição do produto
+* Unidade (quantidade mínima)
+* Preço da unidade
+* Quantidade
+* Preço total do item
+* Impostos sobre o item (ex. IPI)
+* Valor total do item
+* Valor total do pedido
+* Status do pedido [Em aberto / Fechado / Cancelado]
+* Aprovador
+* Data de aprovação
+* Prazo de entrega
+* Observações / Justificativas
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE PEDIDO DE COMPRA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar relatório de consulta de pedido de compra, contemplando os seguintes atributos:
+Filtros
+* Período (Data: de ___ até ___)
+* Número do pedido de compra 
+* Fornecedor
+* Status do pedido [Em aberto / Fechado / Cancelado]
+Resultado
+* Número do pedido
+* Data de emissão
+* Descrição do pedido 
+* Data de emissão
+* Distribuidora de origem de compra
+* Fornecedor 
+* Status do pedido [Em aberto / Fechado / Cancelado]
+* Valor do pedido 
+* Modalidade [Material Adquirido | Devolução | Restauração | Doação]
+* Itens do pedido
+* Especificações dos itens
+DELTAG2
+UCTAG. REGISTRAR NOTA FISCAL 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar, imprimir, inserir, alterar e excluir nota fiscal, contemplando os seguintes atributos:
+* Regional 
+* Sub-regional
+* Administração
+* Localidade
+* Número da nota fiscal
+* Data
+Itens da nota fiscal
+* Código do produto 
+* Descrição do produto 
+* Unidade 
+* Quantidade do item de nota fiscal
+* Valor unitário do item de nota fiscal
+* Valor total por item
+* Tipo de aquisição [Novo (default) / Reforma]
+* Código do CFOP
+* Imposto (IPI)
+* Alíquota(%)
+* Conta Contábil [Conta Crédito / Conta Débito]
+* Histórico padrão 
+* Valor total da nota fiscal
+* Pedido de compra
+* Doação [Sim / Não]
+* Observação
+DELTAG2
+UCTAG. MANTER ITEM DE ESTOQUE 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar, inserir, alterar e excluir item de estoque, contemplando os seguintes atributos:
+* Distribuidora
+* Abrangência Distribuidora [Geral / Regional]
+* Código do produto 
+* Endereçamento físico
+* Local de armazenagem
+* Quantidade de unidades
+* Quantidade total de itens 
+* Média de consumo
+* Média do mês
+* Média do ano
+DELTAG2
+UCTAG. MANTER DECLARAÇÃO DE TRÂNSITO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar, imprimir, inserir, alterar e excluir declaração de trânsito, contemplando os seguintes atributos:
+Informações gerais:
+* Número da declaração de transito (sequencial - automático)
+* Peso
+* Quantidade de volumes
+* Transportadora
+* Numero da ordem de separação
+* Informações Gerais (ex. estatuto da Congregação)
+Dados do destinatário:
+* Nome do destinatário
+* Endereço
+* Fone
+* Cidade 
+* Estado 
+* País
+* CEP
+Itens da declaração de trânsito:
+* Código do produto 
+* Descrição do produto 
+* Unidade 
+* Quantidade do item de declaração de trânsito
+* Valor unitário do item de declaração de trânsito
+* Valor total por item de declaração de trânsito
+DELTAG2
+UCTAG. GERAR DECLARAÇÃO DE ENTREGA DE INSTRUMENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar declaração de entrega de instrumento.
+DELTAG2
+UCTAG. GERAR COMUNICAÇÃO AO MINISTÉRIO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar comunicação ao ministério.
+DELTAG2
+UCTAG. GERAR COMPROVANTE DE ENTREGA 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar comprovante de entrega.
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE PLANILHA CEGA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de planilha cega, contemplando os seguintes atributos:
+Filtro
+* Distribuidora
+Informações Gerais:
+* Distribuidora
+* Via da planilha cega [A / B / Outra]
+* Data do inventário
+* Data do relatório
+Informações dos Itens a serem inventariados: 
+* Código do produto 
+* Descrição do produto 
+* Grupo do produto
+* Endereçamento físico 
+* Local de armazenagem
+* Unidade (quantidade de itens por embalagem)
+* Quantidade de unidades 
+* Quantidade total de itens 
+* Responsáveis
+Outros campos em branco para preenchimento manual:
+* Campo para assinatura manual dos colaboradores responsáveis pelo inventário físico
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE DIVERGÊNCIA DE PLANILHA CEGA 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para consultar divergências entre as duas vias A e B de uma planilha cega, contemplando os seguintes atributos: 
+Filtro
+* Distribuidora
+* Data do inventário planilha A
+* Data do inventário planilha B
+Resultado
+* Distribuidora
+* Código do produto
+* Descrição do produto
+Campos com 3 colunas: Planilha A, Planilha B, Diferença
+* Unidade
+* Quantidade de unidades
+* Quantidade total de itens
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE AJUSTE 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para consultar divergências entre o saldo do estoque no sistema e o saldo do estoque físico, contemplando os seguintes atributos: 
+Filtro
+* Distribuidora
+Resultado
+* Distribuidora
+* Código do produto
+* Descrição do produto
+Campos com 3 colunas: Saldo Estoque Físico, Saldo do Sistema, Diferença
+* Unidade
+* Quantidade de unidades
+* Quantidade total de itens
+DELTAG2
+UCTAG. APROVAÇÃO DE AJUSTE DE SALDO DE ESTOQUE 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar, a partir do relatório de consulta de divergências entre o saldo do estoque no sistema e o saldo do estoque físico, uma interface para aprovar o ajuste de divergências.
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE INVENTÁRIO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório gerencial de inventário, contemplando os seguintes atributos: 
+Filtro
+* Código do produto
+* Descrição do produto
+* Grupo do produto
+* Endereçamento físico
+* Local de armazenagem
+* Distribuidora
+Resultado
+* Código do produto
+* Código do item
+* Descrição do produto
+* Grupo do produto
+* Endereçamento físico (prateleira/corredor)
+* Endereçamento sistêmico
+* Especificações do produto
+* Distribuidora 
+* Unidade
+* Quantidade de unidades
+* Quantidade total de itens
+* Data do relatório
+DELTAG2
+UCTAG. GERAR LISTA DE EVENTOS	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar lista de eventos, contemplando os seguintes atributos:
+Filtros
+* Tipo de evento (permitir selecionar mais um)
+* Freqüência [Anual/Trimestral/Mensal] 
+* Período
+* Regional
+* Subregional
+* Administração
+* Setor
+* Localidade
+* Localidade Central
+* Departamento (se temos filtro por Departamento, então o evento pode ter também o atributo de Departamento, opcional?)
+Resultado
+* Tipo de Evento 
+* Administração
+* Data
+* Horário
+* Localidade
+* Servo que atenderá 
+DELTAG2
+UCTAG. REGISTRAR PLANILHA CEGA 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar, inserir, alterar e excluir os dados da planilha cega, contemplando os seguintes atributos:
+Informações Gerais:
+* Distribuidora
+* Via da planilha cega [A / B / Outra]
+* Data do inventário
+* Data do relatório
+Informações dos Itens inventariados: 
+* Código do produto
+* Descrição do produto
+* Grupo do produto
+* Endereçamento físico
+* Local de armazenagem
+* Unidade (quantidade de itens por embalagem)
+* Quantidade de unidades
+* Quantidade total de itens
+* Responsáveis
+DELTAG2
+UCTAG. MANTER COLETAS	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, consultar e excluir lançamentos de coletas, contemplando os seguintes atributos:
+Dados do Culto
+* Localidade (casa de oração)
+* Tipo de culto
+* Data e hora do culto
+* Total de Coleta
+Dados das Coletas (Uma ou mais ocorrências)
+* Tipo de Coleta
+* Valor
+DELTAG2
+UCTAG. CONSULTAR COLETAS	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar coletas, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Localidade (casa de oração)
+* Tipo de coleta
+* Tipo de culto
+* Período
+Resultado
+Dados de Coleta
+* Localidade (casa de oração) 
+* Tipo de culto
+* Data e hora do culto
+* Tipo de coleta
+* Valor
+* Valor Total de Coleta
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos, contemplando os seguintes atributos:
+Dados Gerais
+* Evento
+* Data
+* Horário de início
+* Horário de fim
+* Duração
+* Responsável (pode ser sobreposto com o que foi cadastrado no evento)
+o Cargo / Ministério / Função do responsável
+o Se for Outros, a descrição (professor, palestrante)
+* Nome do responsável
+Participantes
+* Código do participante
+* Ministério / Cargo / Função
+DELTAG2
+UCTAG. MANTER PESSOA FÍSICA - DETALHE MINISTÉRIO / CARGO / FUNÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar detalhe de ministério / cargo / função de pessoa física, contemplando os seguintes atributos:
+* Código
+* Cargo / Ministério / Função
+* Data de Início (apresentação)
+* Data de Término
+* Servo que assinou a ficha de apresentação
+* Observação
+Esfera Administrativa
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade (casa de oração)
+Dados da Apresentação / Ordenação
+* Data
+* Servo que irá apresentar / ordenar
+* Localidade (casa de oração) de apresentação / ordenação
+DELTAG2
+UCTAG. MANTER SOLICITAÇÃO DE PESSOAL	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar solicitação de pessoal, contemplando os seguintes atributos:
+* Irmão solicitante
+* Regional solicitante
+* Sub-regional solicitante
+* Administração solicitante
+* Localidade solicitante
+* Motivo da contratação
+* Função 
+* Salário
+* Descrição
+* Comentário
+* Status [Aguardando Aprovação / Em Aberto / Fechada / Cancelada]
+* Data de aprovação / cancelamento
+* Responsável pela aprovação / cancelamento
+DELTAG2
+UCTAG. MANTER CANDIDATO A VAGA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar candidato à vaga, contemplando os seguintes atributos:
+* Solicitação de pessoal
+* Nome
+* Sobrenome
+* Telefone
+* E-mail
+* Exame Médico [Apto / Não Apto]
+* Status do Candidato [Aprovado / Não Aprovado]
+* Justificativa
+DELTAG2
+UCTAG. MANTER SOLICITAÇÃO DE PAGAMENTO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para manter solicitação de pagamento, contemplando os seguintes atributos:
+Dados de Entrada
+Origem da Mão-de-Obra
+* Regional
+* Sub-regional
+* Administração
+* Localidade (casa de oração)
+* Item a ser pago (Folha de Pagamento / Adiantamento / Impostos, etc.) (verificar contabilidade - histórico padrão)
+* Data
+* Mês de competência
+* Data de vencimento
+* Valor
+* Comentários
+DELTAG2
+UCTAG. GERAR TED/DOC	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar ofício de DOC/TED, contemplando os seguintes atributos:
+Dados de Entrada
+* Banco/Caixa
+Nota Fiscal
+* Tipo de NF [NF Produto / NF Serviço / Recibo]
+* Número NF
+* Numero da TED/DOC
+Outros Pagamentos
+* Solicitação de pagamento (acrescentado)
+Texto Padrão
+* Numero da TED/DOC
+Nota Fiscal
+* Nome Fornecedor
+* Numero Doc (NF)
+Outros Pagamentos
+* Descrição
+* Numero Casa de Oração
+* Numero Conta Corrente
+* Histórico (Numero de controle)
+* Valor
+Campo de formulário para Assinaturas
+* Presidente
+* Tesoureiro
+* Secretário
+* Conselho Fiscal
+* Contador
+Ofício
+* Valor
+* Descrição por extenso
+* Nome do Fornecedor/Administração
+* Data (por Extenso)
+DELTAG2
+UCTAG. GERAR BORDERÔ	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar o borderô dos pagamentos para aprovação via sistema, contemplando os seguintes atributos:
+Dados de Entrada
+* Período
+* Administração
+Borderô de pagamentos
+* Data do borderô
+* Numero do documento;
+* Histórico de lançamento;
+* Data de Vencimento;
+* Valor
+* Total do Borderô
+DELTAG2
+UCTAG. MANTER FUNCIONÁRIO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar dados de funcionário, contemplando os seguintes atributos:
+* Código pessoa física
+* Data de contratação
+* Tipo de contrato
+* Prazo do contrato
+* Função 
+* (outros campos aplicáveis)
+* Localidade
+* Horário de trabalho
+* Folgas
+DELTAG2
+UCTAG. GERAR PLANILHA DE ESCALAS E FOLGAS	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar planilha de escalas e folgas, contemplando os seguintes atributos:
+Dados de Entrada
+* Período
+* Localidade
+Resultado
+* Localidade
+* Data
+* Funcionário
+* Horário de trabalho
+* Folga
+DELTAG2
+UCTAG. MANTER DEPÓSITO BANCÁRIO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para registro e correção de lançamentos de depósitos bancários, contemplando os seguintes atributos:
+* Regional 
+* Sub-regional 
+* Administração 
+* Localidade
+* Mês Vigente
+* Ano Vigente
+* Total do Lote
+* Data de lançamento (DDMMAAAA)
+* Código Banco/Caixa
+* Numero do Documento (Numero do Deposito bancário)
+* Valor
+DELTAG2
+UCTAG. MANTER INSTRUMENTO MUSICAL 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar instrumentos musicais, contemplando os seguintes atributos:
+* Código do produto
+* Código de item de estoque (obs.: para quando o instrumento estiver estocado em alguma distribuidora; quando estiver em reforma, ou empréstimo, este atributo estará em branco) 
+* Ano do instrumento
+* Tipo de aquisição [Doação / Compra]
+* Irmão de ministério responsável
+* Irmão responsável pela retirada (ok, mas estes campos não deveriam ir para a UCTAG?)
+* Data de aquisição
+* Observação
+DELTAG2
+UCTAG. MANTER INSTRUMENTO MUSICAL - DETALHE EMPRÉSTIMO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar empréstimos de instrumentos musicais, contemplando os seguintes atributos:
+* Código do instrumento
+* Código do empréstimo (automático)
+* Irmão beneficiado
+* Telefone beneficiado (obs.: vem automático do cadastro de pessoa física)
+* Data
+* Localidade (obs.: vem automático do cadastro de pessoa física)
+* Encarregado Local (obs.: vem automático do cadastro de localidade) 
+* Encarregado Regional (obs.: vem automático do cadastro de localidade)
+* Situação [Em Análise / Aprovado / Não Aprovado]
+* Há instrutor para o instrumento? [Sim / Não]
+* Nível de estudo do candidato
+* Observação
+DELTAG2
+UCTAG. MANTER INSTRUMENTO MUSICAL - DETALHE REFORMA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar reformas de instrumentos musicais, contemplando os seguintes atributos:
+* Código do instrumento 
+* Código da reforma (automático)
+* Fornecedor
+* Data de envio
+* Data de previsão de retorno
+* Data de retorno
+* Observação
+DELTAG2
+UCTAG. MANTER ORDEM DE SEPARAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar, inserir, alterar e excluir ordens de separação, contemplando os seguintes atributos:
+* Número da Ordem de Separação
+* Número do pedido (vinculado à ordem de separação)
+* Distribuidora de origem
+* Destino [Distribuidora / Igreja]
+* Distribuidora de destino ou Localidade de destino
+* Código do produto
+* Quantidade
+* Solicitante
+* Tipo de pedido [Doação / Ajuste de Estoque / Empréstimo]
+* Status [Em Andamento / Concluído]
+* Aprovação [Aprovado / Rejeitado]
+* Justificativa
+* Transportadora
+Especifico Instrumento Musical
+* Instrumento musical
+DELTAG2
+UCTAG. GERAR RELATÓRIO ANUAL DE ENTRADA E SAÍDA DE INSTRUMENTOS MUSICAIS	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório anual de entrada e saída de instrumento musical, contemplando os seguintes atributos:
+Filtros
+* Distribuidora
+* Ano
+* Período
+Resultado
+* Instrumento
+* Categoria
+* Tipo
+Por mês
+* Mês de Referencia
+* Quantidade de instrumentos doados (obs.: entrada)
+* Quantidade de instrumentos comprados (obs.: entrada)
+* Quantidade de instrumentos emprestados (obs.: saída)
+* Saldo inicial
+Saldo final Por ano/Período
+* Quantidade total de instrumentos doados
+* Quantidade total de instrumentos comprados
+* Quantidade total de instrumentos emprestados
+DELTAG2
+UCTAG. MANTER PRODUTO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar, inserir, alterar e excluir produto, contemplando os seguintes atributos:
+Informações Gerais
+* Código do produto
+* Código interno do produto
+* Descrição do produto
+* Grupo do produto 
+* Preço médio 
+* Unidade de Medida
+* Volume
+* Estoque mínimo
+* Ponto de reposição
+* Embalagem (caixa, galão, fardo, folha)
+* Número de produtos para embalagem 
+* Classificação [Produto acabado / Matéria-Prima / Insumo / Material de Consumo]
+Especificações 
+* Peso Bruto
+* Peso Líquido
+* Dimensões
+* Modelo
+* Cor
+* Qualidade
+* Observações
+* Outros aplicáveis
+DELTAG2
+UCTAG. MANTER ATIVIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar atividades, contemplando os seguintes atributos:
+* Atividade
+* Descrição da atividade
+* Duração
+Insumos
+* Produto
+* Quantidade utilizada
+* Recursos humanos
+* Equipamentos / utensílios
+DELTAG2
+UCTAG. MANTER SERVIÇO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar serviço, contemplando os seguintes atributos:
+* Serviço
+* Descrição do serviço
+* Periodicidade
+* Regional
+* Sub-Regional
+* Administração
+* Localidade (casa de oração)
+Atividades
+* Atividade
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE INSUMOS POR TIPO DE SERVIÇO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de insumos por tipo de serviço, contemplando os seguintes atributos:
+Filtros
+* Serviço
+* Regional
+* Sub-Regional
+* Administração
+* Localidade (casa de oração)
+Resultado
+* Serviço
+* Descrição do serviço
+* Esfera administrativa
+Atividades
+* Atividade
+Insumo
+o Insumo
+o Quantidade 
+DELTAG2
+UCTAG. GERAR DECLARAÇÃO DE PRÉ-NEGOCIAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar declaração de pré-negociação, contemplando os seguintes atributos:
+(NÃO É UM RELATÓRIO E SIM UMA DECLARAÇÃO)
+* Regional
+* Administração
+* Fornecedor
+* Situação do fornecedor
+* Homologação [Nacional / Regional / Local]
+(NÃO É UM RELATÓRIO E SIM UMA DECLARAÇÃO)
+* Nome fornecedor
+* Contato
+* Data
+Campo livre para digitar e incluir referências necessárias
+* Condições específicas à qualidade
+* Preço
+* Prazo
+* Plano de distribuição logística
+* Campos para assinaturas
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE DOAÇÃO DE INSTRUMENTOS MUSICAIS	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de doação de instrumento musical, contemplando os seguintes atributos:
+Filtros
+* Distribuidora
+* Ano
+* Período
+Resultado
+* Data
+* Localidade (casa de oração)
+* Irmão de ministério responsável
+* Irmão responsável pela retirada
+* Instrumento
+* Número do comprovante (Comprovante de Entrega de Instrumento)
+* Quantidade total
+* Observação
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE RECEBIMENTO DE OFERTA E COLETA MÊS (C-16)	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para consulta de recebimentos de ofertas e coletas no mês, contemplando os seguintes atributos:
+Filtros
+* Formato [Mensal / Anual]
+* Período (MM/AAAA até MM/AAAA)
+* Mapa das coletas [Todas as coletas / Selecionar coletas específicas]
+* Localidade
+* Administração
+* Incluir igrejas sem coleta [sim / não]
+Campos de Resultado
+* Descrição Nome (Administração)
+* Data de Emissão (ddmmaaaa)
+* Periodo
+* Formato
+Mapa de Coletas do Mês e Ano
+* Localidade
+* Administracao
+* Numero da Casa de Oração
+* Tipo de Coleta
+* Total
+DELTAG2
+UCTAG. MANTER LISTA DOCUMENTOS HOMOLOGAÇÃO FORNECEDOR	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, excluir e consultar a relação de documentos necessários para homologar e/ou qualificar fornecedor ou especificação para este tipo de atividade: 
+Lista de Documentos Necessários
+* Nome do Documento (campo texto livre para digitar os documentos necessários conforme exemplo abaixo)
+o Demonstrações financeiras: 
+* Balanço
+* Resultado Exercício
+* DMPL
+* Fluxo de caixa
+* Notas explicativas
+* Parecer de auditoria 
+o Certidões negativas
+o Ficha de cadastramento (física ou digital).
+* Informar Código CNAE (Cadastro Nacional Atividade econômica)
+* Informar Códigos CFOP (Código Fiscal de Operações e Prestações) aplicáveis (incluir substituto e substituição tributária)
+DELTAG2
+UCTAG. MANTER FORNECEDOR - DETALHE DOCUMENTAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar documentos de fornecedor, contemplando os seguintes atributos:
+* Código do fornecedor
+* Lista de documentos necessários para homologação (somente consulta - conforme UCTAG)
+Documentos apresentados
+* Nome do documento
+* Código do documento (conforme Manter Documento)
+DELTAG2
+UCTAG. MANTER REGIONAL	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar regionais, contemplando os seguintes atributos:
+* Nome da regional
+* RGE
+* Localidade (casa de oração) central
+DELTAG2
+UCTAG. MANTER SUB-REGIONAL	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar sub-regionais, contemplando os seguintes atributos:
+* Nome da sub-regional
+* Regional
+* RGE
+* Localidade (casa de oração) central
+DELTAG2
+UCTAG. MANTER ADMINISTRAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar administrações, contemplando os seguintes atributos: 
+* Nome da administração
+* Regional
+* Sub-regional
+* RGE
+* Localidade (casa de oração) central
+* CNPJ
+Titulares (somente consulta)
+* Código irmão
+* Cargo / ministério / função
+* Data de apresentação
+DELTAG2
+UCTAG. MANTER LOCALIDADE (CASA DE ORAÇÃO)	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar localidade (casa de oração), contemplando os seguintes atributos:
+* Código (incremental) 
+* Nome (acrescentado - qual o critério para dar nome à igreja? Poderia ser automático)
+* Status [Ativa / Inativa]
+* Administração 
+* Localidade Igreja Central 
+* Telefone
+* Endereço
+* Complemento 
+* Região do Estado 
+* Estado 
+* Região do País
+* País 
+* Continente
+* CEP 
+* Numero Caixa Postal 
+* Código de Igreja para Correspondência (qual a diferença destes campos?)
+* Código de Relatório da Localidade 
+* Reuniões Regionais de Piedade
+o Evento
+o Numero da Casa de Oração da Realização da Reunião (vem automático conforme o Evento)
+o Freqüência (Mês/Semana/Horário) (vem automático conforme o Evento)
+* RGE (Evento)
+* Coordenadas GPS
+* Nota/Comentário
+DELTAG2
+UCTAG. MANTER CASA DE ORAÇÃO - DETALHE CULTO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar detalhe de culto de localidade (casa de oração), contemplando os seguintes atributos:
+* Tipo de Culto
+* Dia Culto
+* Horário Culto
+* Idioma oficial 
+* Tradução para deficiente auditivo (S/N)
+* Observação
+DELTAG2
+UCTAG. MANTER CASA DE ORAÇÃO - DETALHE MINISTÉRIO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar ministério de localidade (casa de oração), contemplando os seguintes atributos:
+* Irmão
+* Cargo / Ministério / Função
+* Data de Início
+* Data de término
+* Motivo Saída (foi levantado para outro cargo; falecimento ; desligamento da CCB)(é interessante este campo, ou tem implicações jurídicas?)
+* Observação
+DELTAG2
+UCTAG. MANTER LOCALIDADE - LOG DE ALTERAÇÃO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consultar, aprovar ou recusar alterações em localidade, contemplando os seguintes atributos:
+* Localidade
+* Data da atualização do registro
+* Status [Pendente / Aprovada / Recusada]
+* Responsável pela alteração
+* Data de aprovação/recusa do registro
+* Responsável pela aprovação/recusa
+* Observação
+Informações alteradas
+* Informação
+* Valor anterior
+* Valor atual
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE ALTERAÇÃO EM LOCALIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para consultar alteração de informação em localidade, contemplando os seguintes atributos:
+Filtros
+* Período
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade 
+* Responsável pela alteração
+* Responsável pela aprovação/recusa
+Resultado
+* Localidade
+* Data da atualização do registro
+* Status [Pendente / Aprovada / Recusada]
+* Responsável pela alteração
+* Data de aprovação/recusa do registro
+* Responsável pela aprovação/recusa
+* Informação alterada
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE NOVOS OBREIROS 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar  um relatório de novos obreiros, contemplando os seguintes atributos:
+Filtros
+* Período
+* Ministério / Cargo
+Resultado
+* Data e Hora da apresentação / ordenação
+* Nome 
+* Servo que irá apresentar / ordenar
+* Localidade
+* Ministério
+* Ultimo cargo / ministério
+* Servo que assinou a ficha de apresentação
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE FALTA DE INFORMAÇÃO EM LOCALIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para consultar falta de informação em localidade (casa de oração), contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+Resultado
+* Localidade 
+* Informação faltante
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE CARTÃO DE ACESSO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar  um relatório para consultar cartão de acesso, contemplando os seguintes atributos:
+Filtros
+* RGE
+* Regional
+* Sub-regional
+* Administração
+* Localidade (casa de oração)
+* Status Cartão [Pendente de Emissão / Bloqueado / Ativo / Suspenso / Cancelado]
+* Situação [Pendente de Envio / Enviado / Devolvido / Entregue / Em mãos]
+* Remessa
+* Situação da Remessa [Enviada / Recebida]
+Resultado
+* RGE/Administração/Regional
+* Nome do Irmão
+* Ministério
+* Numero do cartão do Irmão
+* Numero do cadastro do Irmão
+* Localidade (casa de oração)
+* Remessa
+* Data da Remessa
+* Flag (indicador, check) para indicar se o cartão será remetido ou não
+Comandos
+* Gerar Remessa
+* Atualizar Remessa
+Dados da Remessa
+* Localidade (casa de oração)
+* Nome do irmão ministério automatico (vem automatico)
+* Data da remessa
+* Numero do Aviso de Recebimento
+* Nome do recebedor
+* Data de entrega
+DELTAG2
+UCTAG. MANTER NORMA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar normas, contemplando os seguintes atributos:
+Dados Gerais
+* Área Responsável (área afetada)
+* Área Responsável pelo Cadastro
+* País
+* Região Geográfica (ex. Sudeste, Centro-Oeste, Sul)
+* Estado
+* Cidade
+* Município 
+* Data de criação 
+* Data de entrada em vigência
+* Data de saída de vigência
+* Descrição da norma
+* Palavras chave 
+* Documento (GED) 
+* Link para o documento
+* Tipo de documento (ex. lei, decreto, portaria) (ex. Estatuto, Diretrizes, tópico administrativo de assembleia, Comunicado, manual administrativo, manual administrativo-técnico)
+* Nome do documento (ex. legislação de...)
+* Número do documento
+* Grupo(s) de notificação
+* Grupo(s) de aprovação 
+* Status [Aguardando aprovação / Vigente / Inativa] (automático)
+Norma Interna
+* Data de registro no cartório
+* Numero de registro no cartório
+* Nome do cartório
+* Evento (instância) (ex. RGE de onde veio a diretriz)
+* Data da revisão
+Norma Externa
+* Âmbito de aplicação [Federal / Estadual / Municipal / Internacional]
+* Orgão expedidor
+Comandos
+* Botão para zerar o cumprimento de normas (aguardo sugestão de um título melhor)
+DELTAG2
+UCTAG. MANTER PARÂMETRO DE AMORTIZAÇÃO / DEPRECIAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar parâmetros de amortização / depreciação, contemplando os seguintes atributos:
+* Família do bem
+* Categoria de bem
+* Tempo de depreciação
+* Percentual de amortização
+DELTAG2
+UCTAG. PESQUISAR NORMA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para consulta de normas, contemplando os seguintes atributos:
+Filtros
+* Área Responsável (área afetada)
+* Área Responsável pelo Cadastro
+* País
+* Região Geográfica (ex. Sudeste, Centro-Oeste, Sul)
+* Estado
+* Cidade
+* Município 
+* Data de entrada em vigência 
+* Descrição da norma
+* Palavras chave 
+* Documento (GED) 
+* Tipo de documento (ex. lei, decreto, portaria) (ex. Estatuto, Diretrizes, tópico administrativo de assembleia, Comunicado, manual administrativo, manual administrativo-técnico)
+* Nome do documento (ex. legislação de...)
+* Número do documento
+* Status [Aguardando aprovação / Vigente / Inativa] 
+Norma Interna
+* Evento (instância) (ex. RGE de onde veio a diretriz)
+Norma externa
+* Âmbito de aplicação [Federal / Estadual / Municipal / Nacional / Internacional]
+* Orgão expedidor 
+Dados Gerais
+* Descrição da norma
+* Âmbito de aplicação [Federal / Estadual / Municipal / Nacional / Internacional]
+* Data de entrada em vigência
+* Data de saída de vigência
+* Link para [Mais detalhes...]
+DELTAG2
+UCTAG. MANTER APLICAÇÃO DE NORMA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar aplicação de norma para um determinado país, regional, sub-regional, localidade, etc., contemplando os seguintes atributos:
+Filtros
+* País
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade (casa de oração)
+* Norma
+Resultado / Dados Gerais
+* País
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade (casa de oração)
+* Norma
+* Data prazo para atendimento
+* Data de atendimento
+* Status [Atendeu / Não Atendeu / Em Andamento]
+* Observação
+DELTAG2
+UCTAG. MANTER LOCALIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar localidade, contemplando os seguintes atributos:
+* Numero protocolo pré-cadastro (Patrimônio)
+* Código (incremental) (este código é o mesmo do relatório? Ou ainda é um outro código? E há necessidade neste caso?)
+* Tipo de Imóvel 
+* Nome da Localidade
+* Telefone
+* Tipo de via [Avenida / Rua / Travessa / Praça / ...] (acrescentado)
+* Endereço
+* Complemento 
+* Bairro
+* Cidade
+* Região do Estado 
+* Estado 
+* Região do País
+* País 
+* Continente
+* CEP
+* Data da Ata da Reunião Administrativa
+* Data da Ata da Reunião Regional
+Análise
+* Data
+* Responsável pela análise
+* Situação [Aprovado / Não Aprovado / Análise em Andamento]
+* Motivo
+DELTAG2
+UCTAG. MANTER LOCALIDADE - ANEXO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar localidade (anexo), contemplando os seguintes atributos:
+* Código 
+* Localidade (casa de oração)
+* Tipo de anexo
+DELTAG2
+UCTAG. MANTER LOCALIDADE - ANEXO – DETALHE PORTARIA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir portarias, contemplando os seguintes atributos:
+* Localidade
+* Tipo Utilização da Portaria com a seguintes modalidades:
+o Geral - Participa Ministério e Colaboradores;
+o Ministério - Somente Irmãos do Ministério (este atributo é realmente da portaria? Já é contemplado na própria reunião, ou seja, no evento)
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE LOCALIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para consulta de localidade, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+Resultado
+* Nome da Localidade
+* Numero protocolo pré-cadastro (Patrimônio)
+* Código do Relatório
+* Tipo de Imóvel 
+* Endereço
+* Bairro 
+* CEP
+* Cidade 
+* Estado 
+* País 
+* Regional
+* Sub-regional 
+* Administração
+* Setor
+DELTAG2
+UCTAG. MANTER TIPO AGRUPAMENTO BEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar tipo de agrupamento de bens - família de bens, contemplando os seguintes atributos:
+* Código
+* Descrição 
+(Ex.: 1 - Móveis e Utensílios; 2 - Orgãos e Instrumentos Musicais; 3 - Maquinas e Equipamentos; 4 - Ferramentas; 5 - Veículos; 6 - Instalações; 7 - Softwares)
+DELTAG2
+UCTAG. MANTER CATEGORIA BEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar categoria de bens - tipo de bens, contemplando os seguintes atributos:
+* Tipo de agrupamento de bem
+* Código de categoria
+* Descrição de categoria
+DELTAG2
+UCTAG. MANTER BEM FÍSICO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar bem físico, contemplando os seguintes atributos:
+* Código
+* Família
+* Categoria
+* Descrição do bem
+* Status [Novo / Inativo (ou baixado?) / Em conserto / Reformado / Não Localizado] (Acrescentado) 
+* Localização do bem (conforme destinatários possível de movimentação de bem)
+o Localidade
+o Administração
+o Fornecedor
+* Localidade
+* Chapinha
+* Numero da nota fiscal
+* Data da nota fiscal (vem automático da nota fiscal)
+* Valor da nota fiscal (vem automático da nota fiscal)
+* Fornecedor (vem automático da nota fiscal)
+* Declaração de transito
+* Termo de transferência
+* Data do termo de transferência
+* Motivo da baixa
+o Obsolescência
+o Roubo
+o Venda
+* Numero da Casa de Oração (vem automático do último local)
+* Nome da Casa de Oração (vem automático do último local)
+* Nome do responsável
+* Data da baixa
+* É necessário acrescentar o atributo de conta contábil? O que seria esta conta: a) por tipo de bem; b) por localidade?
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO - DETALHE IDENTIFICAÇÃO E ETIQUETAÇÃO DE BENS	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos - detalhe identificação e etiquetação de bens, contemplando os seguintes atributos:
+* Instância de evento
+* Quantidade de irmãos necessários
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE BEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de bens, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+* Status (acrescentado)
+* Data de referência (para cálculos de depreciação)
+Resultado
+* Data / Hora do relatório de bem
+* Localidade
+* Código Localidade
+* Localização do bem (conforme destinatários possível de movimentação de bem)
+o Localidade
+o Administração
+o Fornecedor
+* Código do bem
+* Descrição do bem
+* Status (acrescentado)
+* Data de aquisição
+* Valor
+* Observação
+DELTAG2
+UCTAG. GERAR ETIQUETA DE BEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de bens, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Localidade
+* Período (aquisição)
+* Bem
+Parâmetro
+* Quantidade de etiquetas por linha
+* Quantidade de etiquetas por coluna
+Resultado
+* Flag (indicador, check) para indicar se a etiqueta do bem será emitida ou não
+* Bem
+DELTAG2
+UCTAG. GERAR RELATÓRIO DIVERGÊNCIA BEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para exibir a divergência entre as informações do sistema e do coletor, contemplando os seguintes atributos:
+PRECISAMOS DEFINIR ATRIBUTOS
+DELTAG2
+UCTAG. MANTER MOVIMENTAÇÃO BEM	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, consultar e excluir movimentação de bem, contemplando os seguintes atributos:
+Filtros
+* Localidade
+* Bem
+Resultado
+Lista de Bens
+* Flag (indicador, check) para indicar se a etiqueta do bem será emitida ou não
+* Bem
+* Nome do Solicitante (responsável por requisitar a movimentação do bem)
+* Destinatário 
+o Localidade
+o Administração
+o Fornecedor
+* Observação
+* Data de Saída
+* Data de Retorno
+* Data da Baixa (este atributo não deveria ficar aqui, e sim do cadastro do bem, veja 'Manter Bem Físico')
+DELTAG2
+UCTAG. GERAR DECLARAÇÃO DE TRANSFERÊNCIA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar declaração de transferência, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+Resultado
+* Observação
+* Contas/Saldos Contábeis
+Relação Analítica dos bens:
+* Identificação (Código do bem - Numero Casa da Oração + Seqüencial + Valor Adicionado (Reforma));
+* Numero de Identificação Físico (Chapinha)
+* Descrição
+* Data Aquisição
+* Valor da Aquisição
+* Valor Depreciado
+DELTAG2
+UCTAG. MANTER CATEGORIA OBRIGAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar categoria de obrigações, contemplando os seguintes atributos:
+* Código
+* Nome
+* Status [Ativo / Inativo]
+* Administração
+* Numero ordem
+* Descrição
+* Cd Adm (qual a diferença deste campo para o campo Administração? E eu sugiro retirar os dois. Aqui deveria ser só o cadastro do tipo de obrigação, e outra funcionalidade é que se faz esta amarração)
+Ex.: 
+* Documentos 
+* Licenças 
+* Tributos/Ocorrencias 
+* Contratos
+* Periódicos (Reforma/construção)
+DELTAG2
+UCTAG. MANTER OBRIGAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar obrigações, contemplando os seguintes atributos:
+* Código 
+* Categoria
+* Nome Obrigação (documento)
+Lista de Atributos da Obrigação
+* Nome do atributo
+* Preenchimento obrigatório [Sim / Não] 
+Lista de Documentos da Obrigação
+* Nome do documento
+* Obrigatório [Sim / Não]
+DELTAG2
+UCTAG. MANTER OBRA (CONSTRUÇÃO / REFORMA)	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar construções, contemplando os seguintes atributos:
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+* Tipo de Obra [Construção / Reforma]
+Específico Construção
+* Numero do formulário 3 - Ficha de Acompanhamento de Processo (O que é isto?)
+Específico Reforma
+* Numero do Formulário 4 - Ficha de Solicitação de Vistoria para Reforma (O que é isto?) 
+* Tipo de Reforma [Com Aumento de Área / Sem Aumento de Área]
+Dados de Início
+(nos campos que são 'data da ata', não deveriamos ter também o codigo do documento no GED, para consulta? Creio que só a data não é interessante)
+* Data da Ata de reunião Ministerial ADM
+* Data do Anteprojeto
+* Data do Projeto
+* Data da Ata Ministerial Regional (Até 1000m2)
+* Data da Ata Ministerial Conselho de Anciães Mais Antigos (Acima de 1001m2)
+* Data de Implantação Livros de Adesão (01) (o que é este número 01?) e Livro de Presença (02) (o que é este número 02?)
+* Numero da Matricula INSS
+* Numero do Alvará Ministério do Trabalho
+* Data do documento Comunicado Início Obra
+Dados de Término
+* Relatório Término de Obra
+* Ata de reunião Ministerial ADM (Abertura)
+* Ata de reunião Ministerial Regional/Sub-regional (Abertura)
+* Habite-se
+* CND
+* AVCB
+* Protocolo Licença Funcionamento
+* Licença de Funcionamento
+* Guia Recolhimento ISS
+* Auto de Conclusão
+DELTAG2
+UCTAG. MANTER SOLICITAÇÃO VISTORIA REFORMA LOCALIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar vistorias de localidade, contemplando os seguintes atributos:
+* Numero Solicitação
+* Data
+* Cidade
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+* Centro de Despesa (O que vai ser isto? Conta contábil?)
+* Tipo de Reforma [Com Aumento de Área / Sem Aumento de Área]
+Atividades a realizar (esta atividade não é a mesma do UCTAG?)
+* Descrição
+* Valor Estimado
+* Valor Realizado (este valor não deveria migrar para o Manter Reforma?)
+* Observação
+* Fechar Casa de Oração [Sim / Não]
+* Suspender Cultos [Sim/ Não]
+* Quantidade de dias a suspender (Culto)
+* Suspender RJM [Sim/ Não]
+* Quantidade de dias a suspender (RJM)
+* Via Estrutural ou Coletora [Sim / Não] (não entendi)
+* Zona Especial Interesse Social - ZEIS [Sim / Não] (não entendi)
+* Total Previsto
+* Total Realizado (Mensal) (a que se refere este valor? Se for o real, deveria migrar para o Manter Reforma)
+* Nome responsável - Ministério (este campo também não deveria estar no Manter reforma?)
+* Nome responsável - Manutenção(este campo também não deveria estar no Manter reforma?)
+DELTAG2
+UCTAG. MANTER DEMOLIÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar demolição de localidade, contemplando os seguintes atributos:
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+Dados de Início
+* Data da Ata de reunião Ministerial ADM
+* Alvará de Demolição
+* Numero Matricula INSS
+* Data Comunicado Autorizar Demolição
+* Fornecedor (empresa responsável)
+* Data do Formulário 2 (O que é isto?)
+* Numero Formulário 2
+* Numero CND (?)
+* Data CND (?)
+Tributos
+* Nome do Tributo
+* Data da Guia de Recolhimento
+* Valor
+DELTAG2
+UCTAG. MANTER OBRIGAÇÃO POR LOCALIDADE / ESFERA ADMINISTRATIVA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar obrigações por localidade / esfera administrativa, contemplando os seguintes atributos:
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+* Código da Obra (opcional)
+* Código da Demolição (opcional)
+* Obrigação
+* Data de criação
+* Prazo para atendimento (vencimento)
+* Status [Atendida / Não atendida / Em andamento] 
+Lista de Atributos da Obrigação
+* Nome do atributo
+* Valor informado
+Lista de Documentos da Obrigação
+* Nome do documento
+* Documento (GED)
+DELTAG2
+UCTAG. CONSULTAR OBRIGAÇÃO POR LOCALIDADE / ESFERA ADMINISTRATIVA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para consultar obrigações por localidade / esfera administrativa, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+* Obrigação
+* Status [Atendida / Não atendida / Em andamento] 
+* Período de Criação
+* Período de Vencimento
+Resultado
+* Localidade
+* Obrigação
+* Situação
+* Link para [Mais detalhes...]
+DELTAG2
+UCTAG. MANTER TIPO DE IMÓVEL	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar tipo de imóvel, contemplando os seguintes atributos:
+* Código
+* Descrição
+(Ex.: 
+IP - Imóvel Próprio
+CP - Construção Própria
+IC - Imóvel Cedido
+IA - Imóvel Alugado
+IMAQ - Imóvel Processo de Aquisição
+Outras)
+DELTAG2
+UCTAG. MANTER EVENTO - DETALHE CURSO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir eventos - detalhe curso, contemplando os seguintes atributos:
+* Evento
+* Curso
+DELTAG2
+UCTAG. MANTER FONTE DE RISCO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar fontes de risco, contemplando os seguintes atributos:
+* Risco 
+* Descrição do Risco
+* Tipo de Risco (Classificação) 
+* Impacto
+* Penalidades
+* Procedimento/Requisito recomendado
+Lista de Normas Aplicáveis
+* Norma Aplicável
+DELTAG2
+UCTAG. MANTER PLANO DE AÇÃO CONTRA RISCO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar plano de ação contra risco, contemplando os seguintes atributos:
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade
+* Plano de ação (descrição do plano)
+* Resultado do Plano de ação (A ser preenchido após a execução do plano)
+Lista de Riscos Contemplados
+* Risco 
+* Tipo de Risco (vem automático)
+DELTAG2
+UCTAG. MANTER CURSO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar cursos, contemplando os seguintes atributos:
+* Nome do Curso
+* Conteúdo programático
+* Publico / Funções alvo
+* Periodicidade para reciclagem (caso Aplicável)
+* Esfera Administrativa de Aplicação [Regional / Sub-regional / Administração / Localidade (casa de oração)]
+* Material de Apoio (Apostila/legislação etc.)
+* Grau de importância [Obrigatório / Desejável]
+DELTAG2
+UCTAG. MANTER PESSOA FÍSICA - DETALHE COLABORADOR	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar detalhe de colaborador, contemplando os seguintes atributos:
+* Código
+* Sub-área
+* Status [Sugerido / Confirmado / Não Aprovado]
+DELTAG2
+UCTAG. MANTER SETOR	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar setores, contemplando os seguintes atributos:
+* Nome do setor
+* Regional
+* Sub-regional
+* Administração
+* RGE
+* Localidade (casa de oração) central
+DELTAG2
+UCTAG. MANTER EVENTO - DETALHE REUNIÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir eventos - detalhe reunião, contemplando os seguintes atributos:
+* Evento
+* Salão
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO - DETALHE REUNIÃO DA MOCIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos - detalhe reunião da mocidade, contemplando os seguintes atributos:
+* Instância de Evento
+* Total da coleta
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO - DETALHE REUNIÃO MINISTERIAL	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos - detalhe reunião ministerial, contemplando os seguintes atributos:
+* Instância de Evento
+* Carta de convocação
+* Pauta de reunião
+* Tópicos abordados
+* Ata de reunião
+Quantidade total de participantes
+* Anciães
+* Diáconos
+* Cooperadores do ofício
+* Cooperadores de jovens
+* Encarregados regionais
+* Encarregados locais
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO - DETALHE ENSAIO REGIONAL	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos - detalhe ensaio regional, contemplando os seguintes atributos:
+* Instância de Evento
+* Encarregado regional que atenderá a parte musical
+* Total da coleta
+Quantidade total de participantes
+* Anciães
+* Diáconos
+* Cooperadores do ofício
+* Cooperadores de jovens
+* Encarregados regionais
+* Encarregados locais
+* Examinadoras
+* Músicos por categoria (ex. violino, violas, trompetes, etc.)
+* Organistas
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO - DETALHE REUNIÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos - detalhe reunião, contemplando os seguintes atributos:
+* Instância de Evento
+* Salão
+* Status [Agendada / Aberta / Realizada] (o que é OCR? Acrescentado o status de Agendada)
+* Hora de abertura
+* Hora de fechamento
+Portarias de acesso
+* Localidade (portaria)
+Participantes
+* Horário de entrada
+* Horário de saída
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO - DETALHE REUNIÃO ADMINISTRAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos - detalhe reunião administração, contemplando os seguintes atributos:
+* Instância de evento
+* Pauta de reunião
+* Tópicos abordados
+* Relação de irmãos apresentados:
+o Data da oração
+o Data de apresentação na localidade
+o Nome
+o Endereço
+o Localidade
+o Ministério / Cargo / Função
+o Informações gerais de testemunho de irmão
+o Anciães responsáveis
+DELTAG2
+UCTAG. MANTER INSTÂNCIA DE EVENTO - DETALHE RGE/RGA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir instâncias de eventos - detalhe RGE/RGA, contemplando os seguintes atributos:
+* Instância de evento
+* Pacote de viagem [Sim / Não]
+* Ocorrências / Irregularidades
+* Custo operacional da reunião
+Quantidade total de participantes
+* Anciães
+* Diáconos
+* Cooperadores do ofício
+* Cooperadores de jovens
+* Colaboradores
+DELTAG2
+UCTAG. GERAR LISTA PRESENÇA EVENTO 	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar lista de presença de eventos, contemplando os seguintes atributos:
+Filtro
+* Instância de Evento
+Resultado
+* Código do participante
+* Ministério / Cargo / Função
+DELTAG2
+UCTAG. GERAR RELATÓRIO CONTROLE PRESENÇA EVENTO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar relatório de controle de presença em eventos, contemplando os seguintes atributos:
+Filtro
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade Central
+* Departamento
+* Cargo / Função / Ministério
+* Evento
+Resultado
+* Evento (acrescentado)
+* Data
+* Administração
+* Servo
+* Localidade relacionada (comum)
+* Numero sequencial (tem alguma serventia este número?)
+DELTAG2
+UCTAG. MANTER SALÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para incluir, alterar, consultar e excluir salões, contemplando os seguintes atributos:
+* Salão
+* Localidade
+* Capacidade
+* Status [Ativo / Inativo]
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE IRMÃOS DE MINISTÉRIO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de consulta de irmãos de ministério (anciães, diáconos, cooperadores do ofício ministerial e cooperadores de jovens), contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade (casa de oração)
+* Esfera geográfica
+o País
+o Região
+o Estado
+o Cidade
+* Ministério (permitir selecionar mais de um tipo)
+* RGE (a que se refere esta RGE? Qual a relação com o ministério?)
+* Ordem cronológica (qual o objetivo deste filtro?)
+Resultado
+* Nome do servo
+* Administração
+* Ministério
+* (não deveria ter mais campos, como comum?)
+DELTAG2
+UCTAG. GERAR BONECO LIVRETO RELATÓRIO RGE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar boneco de livreto de relatório de RGE, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade (casa de oração)
+* Esfera geográfica
+o País
+o Região
+o Estado
+o Cidade
+* Ministério (permitir selecionar mais de um tipo)
+* RGE (O objetivo de deixar o filtro RGE é permitir consultar bonecos de RGEs passadas?)
+* Ordem cronológica (qual o objetivo deste filtro?)
+Resultado
+* Cidade
+* Bairro
+* Endereço
+* CEP
+* Cx Postal
+* Fone
+* Fax
+* Nome Ancião
+* Nome Diácono
+* Tipo de imóvel
+* Dias de culto (obs.: no formato DM, DN, etc.)
+* Número da casa de oração
+* (não deveria ter o nome da casa de oração?)
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE LISTAGEM DE LOCALIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de consulta de listagem de localidade, contemplando os seguintes atributos:
+Filtros
+* Regional
+* Sub-regional
+* Administração
+* Setor
+* Localidade (casa de oração)
+* Esfera geográfica
+o País
+o Região
+o Estado
+o Cidade
+* Ministério (permitir selecionar mais de um tipo)
+* RGE (O objetivo de deixar o filtro RGE é permitir consultar bonecos de RGEs passadas?)
+* Ordem cronológica (qual o objetivo deste filtro?)
+Resultado
+* Cidade
+* Administração
+* Casa de oração
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE PENDÊNCIA DE RESULTADO DE BATISMO E/OU SANTA CEIA	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de consulta de pendência de resultado de batismo e/ou santa ceia, contemplando os seguintes atributos:
+Resultado
+* RGE (Qual o objetivo deste atributo no resultado?)
+* Data da RGE
+* Localidade
+* Código da Casa de oração
+* Cidade
+* Estado
+* Ancião
+* Fone para contato
+* Tipo de Pendência [Batismo / Santa Ceia]
+* Data do culto
+* Número de irmãos
+* Número de irmãs
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE BATIZADOS AGRUPADO POR ESTADO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório de consulta de total de batizados agrupado por estado, contemplando os seguintes atributos:
+Filtro
+* Estado
+Resultado
+* Estado
+* Número de batizados
+* Total Geral
+DELTAG2
+UCTAG. RELATÓRIO DE VALIDAÇÃO DE CADASTRO DE LOCALIDADE	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar um relatório para exibir informações divergentes no cadastro de localidades, contemplando os seguintes atributos:
+* Localidade
+* Informação divergente
+* Data de entrada da divergência
+* Data de correção
+* Indicador de novo (obs.: este indicador mostra que a divergência foi encontrada na última varredura efetuada) (acrescentado)
+* Indicador de exceção (acrescentado)
+* Responsável exceção (acrescentado)
+Total
+* Quantidade de casas de oração
+* Quantidade de Ministério (quebrar por tipo de ministério?)
+DELTAG2
+UCTAG. GERAR RELATÓRIO DE CASAS DE ORAÇÃO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar o relatório de casas de oração, no seguinte formato:
+* Páginas 01, 02, 08, 736: Em branco
+* Página 03: Folha de Rosto - Informações Institucionais
+* Páginas 04, 05, 06 (sem números de páginas): Índice do relatório
+o Título
+o Descrição do conteúdo
+o Indicação de página
+* Página 07: Introdução - texto fornecido pela Secretaria (ver dúvida)
+* Página 09: Capa título 'Estatística'
+* Página 10: 
+o Estatística de batismo por estado
+o Quantidade de bíblias distribuídas à irmandade
+o Quantidade de hinários distribuídos à irmandade
+* Página 11: 
+o Total de casas de oração da Congregação Cristã no Brasil
+* Estado
+* Quantidade de casas de oração na capital 
+* Quantidade de casas de oração na grande capital 
+* Quantidade de casas de oração no interior
+* Quantidade total de casas de oração
+o Campo Texto ' Para resumo e conclusão comparativa' (qual o objetivo?)
+* Página 12, 13: Progresso da Obra de DEUS no Brasil (o que virá nestas páginas?)
+* Páginas 14 a 22: Relação de novos obreiros (o que virá nestas páginas?)
+* Página 23: Novas casas de oração (imóvel próprio - IP)
+* Página 24: Novas casas de oração (construção própria - CP)
+* Página 25: Capa Legendas e Instruções
+* Páginas 26, 27: Informações de legendas e instruções
+* Página 29: Capa Casas de Oração - Brasil
+* Páginas 30 a 735: Corpo do Relatório - relação de casas de oração no Brasil – formato:
+o Nome da Cidade
+o Bairro - Endereço, CEP; -Cx Postal; Fone; Fax; Nome Ancião e Diácono; Identificação do tipo de imovel (IP ou CP); Dias de culto (obs.: DM, DN, etc); Número da Casa de Oração
+* Página 737: Capa Casas de Oração - No Exterior 
+* Páginas 738 a 798: Corpo do Relatório - relação de casas de oração no Exterior – formato:
+o Nome da Cidade
+o Bairro - Endereço, CEP; -Cx Postal; Fone; Fax; Nome Ancião e Diácono; Identificação do tipo de imovel (IP ou CP); Dias de culto (obs.: DM, DN, etc); Número da Casa de Oração
+* Página 799: Conclusão (o que virá nesta página? Quem providenciará?)
+DELTAG2
+UCTAG. MANTER IDENTIFICAÇÃO MALA EVENTO	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para gerar identificação de mala de evento, contemplando os seguintes atributos:
+* Número mala
+Lista de eventos a suprir
+* Evento (RGE)
+DELTAG2
+UCTAG. MANTER CARGOS / MINISTÉRIOS/ FUNÇÕES	UCTAG.	Requirement
+DELTAG1
+O sistema deve disponibilizar uma interface para inserir, alterar, excluir e consultar cargos / ministérios / funções, contemplando os seguintes atributos:
+* Nome
+* Tipo [Cargo / Ministério / Função]
+* Apresentação [Apresentação / Ordenação / Não há]
+* Forma de aprovação [Oração / Consideração]
+* Tipo de Evento de Aprovação (lista)
+DELTAG2
+Congregação Cristã no Brasil :: SIGA :: REQ
+REQ ::Req-Tpl-V4.Doc | 4
+Congregação Cristã no Brasil:: SIGA :: REQ
+REQ :: Req-Tpl-V4.Doc | 1
