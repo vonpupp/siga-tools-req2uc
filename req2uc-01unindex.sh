@@ -41,7 +41,8 @@ cp $1 $2
 FIN=$1
 FOUT=$2
 
-sed -i 's/^RFI[[:digit:]][[:digit:]][[:digit:]]/UCTAG/g' $FOUT
+#sed -i 's/^RFI[[:digit:]][[:digit:]][[:digit:]]/UCTAG/g' $FOUT
+#sed -i 's/^RFI[[:digit:]][[:digit:]][[:digit:]]. //g' $FOUT
 sed -i 's/RFI[[:digit:]][[:digit:]][[:digit:]]/UCTAG/g' $FOUT
 #sed -i 's/RFI. , RFI. , /RFI. ,/g' $FOUT
 

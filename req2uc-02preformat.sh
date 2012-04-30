@@ -53,12 +53,12 @@ FOUT=$2
 sed -i '1,1d' $FOUT
 
 #sed -i 's/Requirement/,/Requirement\n/g' $FOUT
-sed -i 's/Requirement	"/Requirement\nDELTAG1/g' $FOUT
-sed -i 's/^"\tMedium;/DELTAG2/g' $FOUT
+sed -i 's/Requirement	"/Requirement\nDELTAG1	"/g' $FOUT
+sed -i 's/^"\tMedium\tAlbert De La Fuente/"	DELTAG2;/g' $FOUT
 
 # Delete the fourth column
 #sed -i '/DELTAG1/,/^	Medium;/d' $FOUT
-sed -i 's/^DELTAG1.*DELTAG2//g' $FOUT
+#sed -i 's/^DELTAG1.*DELTAG2//g' $FOUT		# This should work, but it doesn't so... python script!
 
 echo "input: $FIN"
 echo "output: $FOUT"

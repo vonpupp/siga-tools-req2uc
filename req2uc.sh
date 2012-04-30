@@ -38,13 +38,13 @@
 
 FINPUT=$1
 
-source req2uc-01unindex.sh $FINPUT.000 $FINPUT.010
-source req2uc-02preformat.sh $FINPUT.010 $FINPUT.020
-#python req2ea-03quote.py $FINPUT.020 $FINPUT.021 "RFI. ,"
+source req2uc-01unindex.sh $FINPUT.000 $FINPUT.010				# ok
+source req2uc-02preformat.sh $FINPUT.010 $FINPUT.020				# ok
+python req2uc-03core.py $FINPUT.020 $FINPUT.021 "DELTAG1	"		# ok
 #python req2ea-03quote.py $FINPUT.021 $FINPUT.022 "RFN. ,"
 #python req2ea-03quote.py $FINPUT.022 $FINPUT.023 "RNF. ,"
 #python req2ea-03quote.py $FINPUT.023 $FINPUT.024 "RN. ,"
-#cp $FINPUT.024 $FINPUT.030
-#source req2ea-04index.sh $FINPUT.030 $FINPUT.040 0 0 0 0
-#source req2ea-05posformat.sh $FINPUT.040 $FINPUT.050
+cp $FINPUT.021 $FINPUT.030
+source req2uc-04index.sh $FINPUT.030 $FINPUT.040 0 0 0 0			# 
+source req2uc-05posformat.sh $FINPUT.040 $FINPUT.050
 

@@ -41,7 +41,9 @@ FIN=$1
 FOUT=$2
 
 sed -i '/^$/d' $FOUT
-sed -i 's/Requirement	/Requirement	"\n/g' $FOUT
+sed -i 's/	Requirement/	UseCase		Medium;/g' $FOUT
+#sed -i 's/^UCTAG[[:digit:]][[:digit:]][[:digit:]].//g' $FOUT
+sed -i 's/^UCTAG/UC/g' $FOUT
 
 # Prepend the header "Name, Alias, Type, Notes, Priority"
 cp $FOUT $FOUT.tmp

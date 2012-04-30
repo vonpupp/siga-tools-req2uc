@@ -58,52 +58,64 @@ tagindex() {
     # Insane cool part...
     # Parsing the first tag
 #'/'$SearchString'/ {print}' "$@"
-    awk '/'$TAG'\. /{\
-      if (FIRST==""){\
-	sub("'$TAG'\. ","'$TAG${IDX}.'");
-	FIRST=1}
-      }
-      {print}' $FOUT > $FOUT.tmp;cp $FOUT.tmp $FOUT;\rm $FOUT.tmp
 
-    echo "Replacing second $TAG on data block $IDX out of $NTAG total blocks"
+#     awk '$1=="$TAG" {
+#       count++
+#       if(count == 1){
+#         sub("$TAG","$TAG${IDX}.",$1)
+#       }
+#     }
+#     {print}' file.txt
+
+#awk '/'$TAG'\. / && count < 1  {gsub("CAR","REPLACE");count++} {print $0}' infile
+#awk '/'$TAG'\. / && count < 1  {sub("'$TAG'\. ","'$TAG${IDX}.'");count++} {print $0}' $FOUT > $FOUT.tmp;cp $FOUT.tmp $FOUT;\rm $FOUT.tmp
+
+     awk '/'$TAG'\. /{\
+       if (FIRST==""){\
+ 	sub("'$TAG'\. ","'$TAG${IDX}.' ");
+ 	FIRST=1}
+       }
+       {print}' $FOUT > $FOUT.tmp;cp $FOUT.tmp $FOUT;\rm $FOUT.tmp
+
+#    echo "Replacing second $TAG on data block $IDX out of $NTAG total blocks"
 
     # Parsing the second tag
-    awk '/'$TAG'\. /{\
-      if (SECOND==""){\
-	sub("'$TAG'\. ","'$TAG${IDX}'.	Requirement");
-	SECOND=1}
-      }
-      {print}' $FOUT > $FOUT.tmp;cp $FOUT.tmp $FOUT;\rm $FOUT.tmp
+     awk '/'$TAG'\.	/{\
+       if (SECOND==""){\
+ 	sub("'$TAG'\.	","'$TAG${IDX}.' 	");
+ 	SECOND=1}
+       }
+       {print}' $FOUT > $FOUT.tmp;cp $FOUT.tmp $FOUT;\rm $FOUT.tmp
   done
 }
 
 NTAG=0
 IDX=0
-tagindex "RFI" $3
-let NRFI=$3 + 1
-NRFIT=$NTAG
-OFFNRFI=$IDX
+tagindex "UCTAG" $3
+let NUC=$3 + 1
+NUC=$NTAG
+OFFNUC=$IDX
 
-NTAG=0
-IDX=0
-tagindex "RFN" $4
-let NRFN=$4 + 1
-NRFNT=$NTAG
-OFFNRFN=$IDX
+#NTAG=0
+#IDX=0
+#tagindex "RFN" $4
+#let NRFN=$4 + 1
+#NRFNT=$NTAG
+#OFFNRFN=$IDX
 
-NTAG=0
-IDX=0
-tagindex "RNF" $5
-let NRNF=$5 + 1
-NRNFT=$NTAG
-OFFNRNF=$IDX
+#NTAG=0
+#IDX=0
+#tagindex "RNF" $5
+#let NRNF=$5 + 1
+#NRNFT=$NTAG
+#OFFNRNF=$IDX
 
-NTAG=0
-IDX=0
-tagindex "RN" $6
-let NRN=$6 + 1
-NRNT=$NTAG
-OFFNRN=$IDX
+#NTAG=0
+#IDX=0
+#tagindex "RN" $6
+#let NRN=$6 + 1
+#NRNT=$NTAG
+#OFFNRN=$IDX
 
 # Adding a quote on the fourth param (close)
 #sed -i 's/^Media/, Medium;/g' $FOUT
@@ -122,7 +134,7 @@ OFFNRN=$IDX
 
 echo "input: $FIN"
 echo "output: $FOUT"
-echo "Number or RFI's: $NRFIT / From: $NRFI to $OFFNRFI"
-echo "Number or RFN's: $NRFNT / From: $NRFN to $OFFNRFN"
-echo "Number or RNF's: $NRNFT / From: $NRNF to $OFFNRNF"
-echo "Number or RN's: $NRNT / From: $NRN to $OFFNRN"
+echo "Number or UC's: $NUCT / From: $NUC to $OFFNUC"
+#echo "Number or RFN's: $NRFNT / From: $NRFN to $OFFNRFN"
+#echo "Number or RNF's: $NRNFT / From: $NRNF to $OFFNRNF"
+#echo "Number or RN's: $NRNT / From: $NRN to $OFFNRN"
